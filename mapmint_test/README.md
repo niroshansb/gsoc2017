@@ -20,9 +20,24 @@ After that you can load the page again, Sometime you may get an error as shown i
 
 This is occured due to duplicate the users in the database. You can check it in the PostgreSQL, under mmdb databse. You can fid users are under "mm" schema and inside the users table. If you can find many users with the same data you can delete them and keep a one. Then you can refresh the Mapmint page and access to administrative modules. It can be seen as following image. 
 
-![img1](img/admin_modules.png "administrative modules") 
+![img2](img/admin_modules.png "administrative modules") 
 
-After successfully complete the installation and access to administrative modules you can start to connect spatial databases and pubslish your data.
+After successfully complete the installation and access to administrative modules you can start sharing publishing your data.
 
-## Connect PostGIS
+### Connect with PostGIS
+
+You can simply establish your PostGIS database connection with MapMint by adding the configuration information with Distiller module. 
+But, befefore that you have to make some changes in the main configuration file in the mapmint according to your server. You can find your main configuration file ( [main.cfg](main.cfg) ) in your server, in the <b> /usr/lib/cgi-bin/mm/ </b> directory. In the main configuration file you can find that the host defined as myhost.net, It need to be changed according to your host name. You can replce myhost.net with your host name (ex: localhost ). 
+Once you done this step, you have to go to the /home/src/mapmint/mapomint-services/vector-tools-src/ direcrory and build the vector tools. (It can be done by using "sudo make" command). If it returns an error as follows 
+
+`g++: error: /home/src/zoo/zoo-project/zoo-kernel/service_yaml.o: No such file or directory`
+
+You can simply remove that line in your Make file and rebuild the vector tools. Now you are ready to connect PostGIS database to mapmint as shown in the below picture. 
+
+![img2](img/postgisdb.png "postgisdb connection")
+
+Once you successfully add the info you are able to see your layers which are inside the database as follows. 
+
+![img3](img/PostGISdata.png "layers from postgisdb")
+
 
