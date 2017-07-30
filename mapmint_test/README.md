@@ -40,4 +40,32 @@ Once you successfully add the info you are able to see your layers which are ins
 
 ![img3](img/PostGISdata.png "layers from postgisdb")
 
+As you can see here, there is an option to preview your layer in this module. But when you are trying to preview the layer sometime you may not able to preview it. It happened, because your javascript library path is different than you defined in japascript confiduration file. 
+You can check the javascript configuration file in <b> /home/src/mapmint/public_map/assets/js </b> directory. Currently the baseUrl is defined as /~djay/progede2/public_map/assets/ , but you have to changed it to <b> /pm/assets </b>. Because all the javascript files are loacated in /assets/js directory. 
+Once you done that, you will be able to see your layes with preview option as shown in below picture. 
 
+![img4](img/preview.png "preview the layer")
+
+### Publish your map
+
+After your preview and select your layer you can open it in the Manager as shown in below picture. You can add layers and save it. 
+
+![img4](img/manager.png "Manager")
+
+Then you can open the publsiher module. 
+
+![img5](img/publish.png "publisher")
+
+Here you can give a title and other theme information to your publishing maps. 
+
+Then you can choose a base layer for instance OpenStreetmap or Google sattelite or streets etc.
+
+![img6](img/baselayer.png "baselayer")
+
+Next you have to define the projection system and default layer extend, maximium and minimum extend. 
+
+![img7](img/info_extend.png "Layer extend")
+
+Likewise you can add all the neccessary information and finally you can publish your map sets with MapMint. 
+
+![img8](img/published.png "Published map")
