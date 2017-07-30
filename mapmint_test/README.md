@@ -14,3 +14,15 @@ Then you can access your MapMint instance by using the following URLs.
 
 Sometime you may get a 404 error, which means page not found. So, you can restart the apache server and try again. 
 
+After that you can load the page again, Sometime you may get an error as shown in below image. 
+
+![img1](img/opening_error.png "Loading") 
+
+This is occured due to duplicate the users in the database. You can check it in the PostgreSQL, under mmdb databse. You can fid users are under "mm" schema and inside the users table. If you can find many users with the same data you can delete them and keep a one. Then you can refresh the Mapmint page and access to administrative modules. It can be seen as following image. 
+
+![img1](img/admin_modules.png "administrative modules") 
+
+After successfully complete the installation and access to administrative modules you can start to connect spatial databases and pubslish your data.
+
+## Connect PostGIS
+
